@@ -1,14 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
-import "./Circulos";
-import Circulo from "./Circulos";
+import Circle from "./Circle.js";
 
 function App() {
-  return (
-    <div className="App">
-      <Circulo />
-    </div>
-  );
+  const circles = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
+  return circles.map((circle) => <Circle key={circle.id} />);
 }
 
 export default App;
